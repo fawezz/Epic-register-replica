@@ -1,0 +1,22 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Langar&display=swap');
+$font1: 'Langar', cursive;
+$font2: 'Andika New Basic', sans-serif;
+// Variables
+
+
+// colors
+$primary-color: #838383;
+$highlight-color: #ffffff;
+$forground-color: #121212;
+$bg-color: #202020;
+$input-bg: #2B2B2B;
+
+
+// mixins
+@mixin flex($dir: row, $justify: center, $align: center){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}

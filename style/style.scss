@@ -1,0 +1,107 @@
+@import "helpers";
+@import "general";
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-family: $font2;
+    background: $forground-color;
+    color: $primary-color;
+}
+#container{
+    font-size: 14px;
+    width: 100%;
+    max-width: 560px;
+    background: $bg-color;
+    padding: 20px 80px;
+    margin: 0 auto;
+    height: auto;
+    #form-head{
+        text-align: center;
+        img{
+            width: 50px;
+        }
+    }
+    #singup-form{
+        @include flex(column, $align: auto, $justify: space-around);
+        height: 600px;
+        h4{
+            color: $highlight-color;
+            padding: 0 10px;
+        }
+        input, select{
+            font-family: inherit;
+            color: grey;
+            padding: 1rem .9rem;
+            background: $input-bg;
+            border: none;
+            border-radius: 3px;
+            caret-color: rgb(218, 218, 218);
+            font-weight: bold;
+            &:focus, &:active{
+                outline: none;
+            }
+            &:required:valid{
+                border: 2px solid green;
+            }
+            &:focus:required:invalid{
+                border: 1px solid red;
+            }
+        }
+        #names{
+            display: flex;
+            justify-content: space-between;
+            input{
+                width: 49%;
+            }
+        }
+        input[type="submit"]{
+            cursor: pointer;
+        }
+        a{
+            text-align: center;
+        }
+    }
+}
+#form-footer{
+    div{
+        @include flex;
+        p{
+            margin: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 560px){
+    #container{
+        padding: 20px;
+        font-size: 12px;
+        #singup-form{
+            input, select{
+                font-size: inherit;
+                padding: 12px 10px;
+            }
+            #names{
+                flex-direction: column;
+                input{
+                    width: 100%;
+                }
+                input[name="First Name"]{
+                    margin-bottom: 11px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 240px){
+    #container{
+        font-size: 8px;
+        padding: 2px;
+    }
+    #form-footer{
+        div{
+            flex-direction: column;
+        }
+    }
+}

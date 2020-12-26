@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Langar&display=swap");
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Andika New Basic", sans-serif;
+  background: #121212;
+  color: #838383;
+}
+
+#container {
+  font-size: 14px;
+  width: 100%;
+  max-width: 560px;
+  background: #202020;
+  padding: 20px 80px;
+  margin: 0 auto;
+  height: auto;
+}
+
+#container #form-head {
+  text-align: center;
+}
+
+#container #form-head img {
+  width: 50px;
+}
+
+#container #singup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: auto;
+      -ms-flex-align: auto;
+          align-items: auto;
+  height: 600px;
+}
+
+#container #singup-form h4 {
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+#container #singup-form input, #container #singup-form select {
+  font-family: inherit;
+  color: grey;
+  padding: 1rem .9rem;
+  background: #2B2B2B;
+  border: none;
+  border-radius: 3px;
+  caret-color: #dadada;
+  font-weight: bold;
+}
+
+#container #singup-form input:focus, #container #singup-form input:active, #container #singup-form select:focus, #container #singup-form select:active {
+  outline: none;
+}
+
+#container #singup-form input:required:valid, #container #singup-form select:required:valid {
+  border: 2px solid green;
+}
+
+#container #singup-form input:focus:required:invalid, #container #singup-form select:focus:required:invalid {
+  border: 1px solid red;
+}
+
+#container #singup-form #names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #singup-form #names input {
+  width: 49%;
+}
+
+#container #singup-form input[type="submit"] {
+  cursor: pointer;
+}
+
+#container #singup-form a {
+  text-align: center;
+}
+
+#form-footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form-footer div p {
+  margin: 5px;
+}
+
+@media only screen and (max-width: 560px) {
+  #container {
+    padding: 20px;
+    font-size: 12px;
+  }
+  #container #singup-form input, #container #singup-form select {
+    font-size: inherit;
+    padding: 12px 10px;
+  }
+  #container #singup-form #names {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #container #singup-form #names input {
+    width: 100%;
+  }
+  #container #singup-form #names input[name="First Name"] {
+    margin-bottom: 11px;
+  }
+}
+
+@media only screen and (max-width: 240px) {
+  #container {
+    font-size: 8px;
+    padding: 2px;
+  }
+  #form-footer div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
