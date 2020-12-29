@@ -1,6 +1,18 @@
 @import "helpers";
 @import "general";
-
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999999999s;
+    -webkit-box-shadow: 0 0 0 30px $focus-input-bg inset !important;
+}
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+    -webkit-text-fill-color: $primary-color !important;
+}
 *{
     box-sizing: border-box;
 }
@@ -8,13 +20,16 @@ html{
     font-family: $font2;
     background: $forground-color;
     color: $primary-color;
-}
-#container{
     font-size: 14px;
+}
+
+// container styling
+#container{
+    max-width: 470px;
+    min-width: 320px;
     width: 100%;
-    max-width: 560px;
     background: $bg-color;
-    padding: 20px 80px;
+    padding: 28px 60px 10px;
     margin: 0 auto;
     height: auto;
     min-height: 100vh;
@@ -24,56 +39,62 @@ html{
             width: 50px;
         }
     }
-    #singup-form{
-        @include flex(column, $align: auto, $justify: space-around);
-        height: 600px;
-        h4{
-            color: $highlight-color;
-            padding: 0 10px;
-        }
-        input, select{
-            font-family: inherit;
-            color: grey;
-            padding: 1rem .9rem;
-            background: $input-bg;
-            border: none;
-            border-radius: 3px;
-            caret-color: rgb(218, 218, 218);
-            font-weight: bold;
-            &:focus, &:active{
-                outline: none;
+    #form-footer{
+        div{
+            @include flex;
+            p{
+                margin: 5px;
             }
-            &:required:valid{
-                border: 2px solid green;
-            }
-            &:focus:required:invalid{
-                border: 1px solid red;
-            }
-        }
-        #names{
-            display: flex;
-            justify-content: space-between;
-            input{
-                width: 49%;
-            }
-        }
-        input[type="submit"]{
-            cursor: pointer;
-        }
-        a{
-            text-align: center;
-        }
-    }
-}
-#form-footer{
-    div{
-        @include flex;
-        p{
-            margin: 5px;
         }
     }
 }
 
+// Form styling
+#singup-form{
+    @include flex(column, $align: auto, $justify: space-around);
+    height: 600px;
+    h4{
+        color: $highlight-color;
+        padding: 0 10px;
+    }
+    input, select, #password{
+        position: relative;
+        font-family: inherit;
+        color: grey;
+        padding: 1rem .9rem;
+        background: $input-bg;
+        border: none;
+        border-radius: 3px;
+        caret-color: rgb(218, 218, 218);
+        font-weight: bold;
+        &:focus, &:active{
+            background: $focus-input-bg;
+            outline: none;
+        }
+        &:focus:required:invalid{
+            border: none;
+            background: rgb(94, 64, 64);
+        }
+    }
+    #password{
+        input{
+            padding: 0;
+        }
+    }
+    #names{
+        display: flex;
+        justify-content: space-between;
+        input{
+            width: 49%;
+        }
+    }
+    input[type="submit"]{
+        cursor: pointer;
+    }
+    a{
+        text-align: center;
+    }
+}
 @media only screen and (max-width: 560px){
     #container{
         padding: 20px;

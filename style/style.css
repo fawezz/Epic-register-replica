@@ -5,6 +5,21 @@ a {
   font-size: inherit;
 }
 
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999999999s;
+  -webkit-box-shadow: 0 0 0 30px #3a3a3a inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: #838383 !important;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -14,14 +29,15 @@ html {
   font-family: "Andika New Basic", sans-serif;
   background: #121212;
   color: #838383;
+  font-size: 14px;
 }
 
 #container {
-  font-size: 14px;
+  max-width: 470px;
+  min-width: 320px;
   width: 100%;
-  max-width: 560px;
   background: #202020;
-  padding: 20px 80px;
+  padding: 28px 60px 10px;
   margin: 0 auto;
   height: auto;
   min-height: 100vh;
@@ -35,72 +51,7 @@ html {
   width: 50px;
 }
 
-#container #singup-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: auto;
-      -ms-flex-align: auto;
-          align-items: auto;
-  height: 600px;
-}
-
-#container #singup-form h4 {
-  color: #ffffff;
-  padding: 0 10px;
-}
-
-#container #singup-form input, #container #singup-form select {
-  font-family: inherit;
-  color: grey;
-  padding: 1rem .9rem;
-  background: #2B2B2B;
-  border: none;
-  border-radius: 3px;
-  caret-color: #dadada;
-  font-weight: bold;
-}
-
-#container #singup-form input:focus, #container #singup-form input:active, #container #singup-form select:focus, #container #singup-form select:active {
-  outline: none;
-}
-
-#container #singup-form input:required:valid, #container #singup-form select:required:valid {
-  border: 2px solid green;
-}
-
-#container #singup-form input:focus:required:invalid, #container #singup-form select:focus:required:invalid {
-  border: 1px solid red;
-}
-
-#container #singup-form #names {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#container #singup-form #names input {
-  width: 49%;
-}
-
-#container #singup-form input[type="submit"] {
-  cursor: pointer;
-}
-
-#container #singup-form a {
-  text-align: center;
-}
-
-#form-footer div {
+#container #form-footer div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,8 +67,76 @@ html {
           align-items: center;
 }
 
-#form-footer div p {
+#container #form-footer div p {
   margin: 5px;
+}
+
+#singup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: auto;
+      -ms-flex-align: auto;
+          align-items: auto;
+  height: 600px;
+}
+
+#singup-form h4 {
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+#singup-form input, #singup-form select, #singup-form #password {
+  position: relative;
+  font-family: inherit;
+  color: grey;
+  padding: 1rem .9rem;
+  background: #2B2B2B;
+  border: none;
+  border-radius: 3px;
+  caret-color: #dadada;
+  font-weight: bold;
+}
+
+#singup-form input:focus, #singup-form input:active, #singup-form select:focus, #singup-form select:active, #singup-form #password:focus, #singup-form #password:active {
+  background: #3a3a3a;
+  outline: none;
+}
+
+#singup-form input:focus:required:invalid, #singup-form select:focus:required:invalid, #singup-form #password:focus:required:invalid {
+  border: none;
+  background: #5e4040;
+}
+
+#singup-form #password input {
+  padding: 0;
+}
+
+#singup-form #names {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#singup-form #names input {
+  width: 49%;
+}
+
+#singup-form input[type="submit"] {
+  cursor: pointer;
+}
+
+#singup-form a {
+  text-align: center;
 }
 
 @media only screen and (max-width: 560px) {
