@@ -1,35 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Langar&display=swap");
-a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: inherit;
-}
-
-/* Change the white to any color ;) */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
-  -webkit-transition-delay: 9999999999s;
-  -webkit-box-shadow: 0 0 0 30px #3a3a3a inset !important;
-}
-
-/*Change text in autofill textbox*/
-input:-webkit-autofill {
-  -webkit-text-fill-color: #838383 !important;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 html {
-  font-family: "Andika New Basic", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   background: #121212;
   color: #838383;
   font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #F4F4F4;
+  font-size: inherit;
 }
 
 #container {
@@ -86,35 +71,45 @@ html {
   height: 600px;
 }
 
-#singup-form h4 {
-  color: #ffffff;
+#singup-form h5 {
+  color: #F4F4F4;
+  text-transform: uppercase;
   padding: 0 10px;
 }
 
 #singup-form input, #singup-form select, #singup-form #password {
-  position: relative;
   font-family: inherit;
-  color: grey;
-  padding: 1rem .9rem;
-  background: #2B2B2B;
+  padding: 14px 12px;
   border: none;
   border-radius: 3px;
-  caret-color: #dadada;
-  font-weight: bold;
+  background: #2B2B2B;
+  color: #F4F4F4;
+  caret-color: #F4F4F4;
 }
 
-#singup-form input:focus, #singup-form input:active, #singup-form select:focus, #singup-form select:active, #singup-form #password:focus, #singup-form #password:active {
-  background: #3a3a3a;
+#singup-form input::-webkit-input-placeholder, #singup-form select::-webkit-input-placeholder, #singup-form #password::-webkit-input-placeholder {
+  color: #838383;
+}
+
+#singup-form input:-ms-input-placeholder, #singup-form select:-ms-input-placeholder, #singup-form #password:-ms-input-placeholder {
+  color: #838383;
+}
+
+#singup-form input::-ms-input-placeholder, #singup-form select::-ms-input-placeholder, #singup-form #password::-ms-input-placeholder {
+  color: #838383;
+}
+
+#singup-form input::placeholder, #singup-form select::placeholder, #singup-form #password::placeholder {
+  color: #838383;
+}
+
+#singup-form input:focus, #singup-form input:valid, #singup-form select:focus, #singup-form select:valid, #singup-form #password:focus, #singup-form #password:valid {
+  background: #484848;
   outline: none;
 }
 
 #singup-form input:focus:required:invalid, #singup-form select:focus:required:invalid, #singup-form #password:focus:required:invalid {
-  border: none;
-  background: #5e4040;
-}
-
-#singup-form #password input {
-  padding: 0;
+  background: #554343;
 }
 
 #singup-form #names {
@@ -132,6 +127,8 @@ html {
 
 #singup-form input[type="submit"] {
   cursor: pointer;
+  background: #191919;
+  color: #838383;
 }
 
 #singup-form a {
@@ -172,5 +169,19 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999999999s;
+  -webkit-box-shadow: 0 0 0 30px #484848 inset !important;
+}
+
+/* Changes color of the autofilled text */
+input:-webkit-autofill {
+  -webkit-text-fill-color: #F4F4F4 !important;
 }
 /*# sourceMappingURL=style.css.map */

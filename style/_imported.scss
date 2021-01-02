@@ -1,17 +1,19 @@
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Langar&display=swap');
-$font1: 'Langar', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+$font1: 'Noto Sans JP', sans-serif;
 $font2: 'Andika New Basic', sans-serif;
 // Variables
 
 
 // colors
 $primary-color: #838383;
-$highlight-color: #ffffff;
+$highlight-color: #F4F4F4;
 $forground-color: #121212;
 $bg-color: #202020;
 $input-bg: #2B2B2B;
-$focus-input-bg: #3a3a3a;
+$focus-input-bg: #484848;
+$required-bg: #554343;
+$btn-bg: #191919;
 
 
 // mixins
